@@ -83,4 +83,5 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'font-awesome-rails'
 end

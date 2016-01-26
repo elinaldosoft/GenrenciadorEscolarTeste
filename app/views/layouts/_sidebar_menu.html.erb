@@ -1,0 +1,75 @@
+<ul class="nav nav-sidebar">
+  <li>
+    <%= link_to root_path do %>
+      <%= fa_icon :"home" %> Inicio
+    <% end %>
+  </li>
+</ul>
+
+
+<hr />
+<ul class="nav nav-sidebar">
+  <li class="disabled">
+    <%= link_to students_path do %>
+      <%= fa_icon :"user" %> Alunos
+    <% end %>
+  </li>
+
+  <li>
+    <%= link_to new_student_path do %>
+      <%= fa_icon :"plus" %> Adicionar
+    <% end %>
+  </li>
+
+  <li>
+    <%= link_to students_path do %>
+      <%= fa_icon :"list" %> Listar Todos
+    <% end %>
+  </li>
+
+</ul>
+
+
+<hr />
+<ul class="nav nav-sidebar">
+  <li class="disabled">
+    <%= link_to courses_path do %>
+      <%= fa_icon :"folder-open" %> Cursos
+    <% end %>
+  </li>
+
+  <li>
+    <%= link_to new_course_path do %>
+      <%= fa_icon :"plus" %> Adicionar
+    <% end %>
+  </li>
+
+  <li>
+    <%= link_to courses_path do %>
+      <%= fa_icon :"list" %> Listar Todos
+    <% end %>
+  </li>
+
+</ul>
+
+<hr />
+<ul class="nav nav-sidebar">
+  <li class="disabled">
+    <%= link_to classrooms_path do %>
+      <%= fa_icon :"paste" %> Matricular Alunos
+    <% end %>
+  </li>
+
+  <li>
+    <%= link_to new_classroom_path do %>
+      <%= fa_icon :"plus" %> Adicionar
+    <% end %>
+  </li>
+
+  <li>
+    <%= link_to classrooms_path do %>
+      <%= fa_icon :"list" %> Listar Todos
+    <% end %>
+  </li>
+
+</ul>

@@ -1,0 +1,32 @@
+<%= form_for @course do |f| %>
+<%= render 'shared/form_errors_messages', resource: @course %>
+
+<div class="row">
+  <div class="col-sm-8">
+    <div class="form-group">
+      <%= f.label :name, 'Nome*' %>
+      <%= f.text_field :name, class: 'form-control', placeholder: 'Nome do curso' %>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="form-group">
+      <%= f.label :status, 'Situação*' %>
+      <%= f.select :status, CourseStatus.to_a, {}, class: 'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="form-group">
+      <%= f.label :description, 'Descrição' %>
+      <%= f.text_field :description, class: 'form-control', placeholder: 'Descrição do curso' %>
+    </div>
+  </div>
+</div>
+
+<button type="submit" class="btn btn-sm btn-block btn-primary">
+  <%= fa_icon :"floppy-disk" %> Salvar <%= tm Course %>
+</button>
+<% end %>

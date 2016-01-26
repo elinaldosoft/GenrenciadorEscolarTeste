@@ -1,0 +1,29 @@
+<h3 class="page-header"><%= tmp Course %></h3>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-10 col-sm-8">
+            <h4 class="no-margin">
+              <%= fa_icon :list %> todos
+            </h4>
+          </div>
+          <div class="col-xs-2 col-sm-4 text-right">
+            <%= link_to new_course_path, class: 'btn btn-xs btn-primary', title: :adicionar do %>
+              <%= fa_icon :plus %> <span class="hidden-xs">adicionar</span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <% if @courses.present? %>
+          <%= render 'courses/courses' %>
+        <% else %>
+          <%= not_found_message Course %>, <%= link_to 'clique aqui para adicionar', new_course_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

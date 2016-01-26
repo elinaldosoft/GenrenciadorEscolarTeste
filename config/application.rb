@@ -25,6 +25,6 @@ module ProficiencyTest
     #config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
-    config.assets.initialize_on_precompile = false
+    
   end
 end

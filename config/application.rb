@@ -7,7 +7,6 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module ProficiencyTest
-  RAILS_ENV=production bundle exec rake assets:precompile
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -25,6 +24,6 @@ module ProficiencyTest
     #config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
-    
+    config.assets.initialize_on_precompile = false
   end
 end

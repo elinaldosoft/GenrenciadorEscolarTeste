@@ -7,7 +7,12 @@ class StudentsController < ApplicationController
 
   def new
     @student = Student.new
-    @matricula = Student.last.id + 1000
+    last_student = Student.last
+    if last_student
+      @matricula = last_student.last.id + 1000
+    else
+      @matricula = 1000
+    end
   end
 
   def create

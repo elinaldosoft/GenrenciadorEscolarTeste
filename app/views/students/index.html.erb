@@ -22,8 +22,9 @@
           <table class="table no-margin">
             <thead>
               <tr>
+                <th width="100">Matrícula</small></th>
                 <th><%= ta Student, :name %> <small>(<%= ta Student, :register_number %>)</small></th>
-                <th width="200"><%= ta Student, :status %></th>
+                <th width="100"><%= ta Student, :status %></th>
                 <th width="100" class="text-right">Ações</th>
               </tr>
             </thead>
@@ -31,9 +32,11 @@
               <% @students.each do |student| %>
                 <tr>
                   <td>
+                    <%= student.register_number %>
+                  </td>
+                  <td>
                     <h5>
                       <div><%= student.name %></div>
-                      <small><%= student.register_number %></small>
                     </h5>
                   </td>
                   <td>
@@ -44,7 +47,7 @@
                   <td>
                     <div class="text-right">
                       <%= link_to edit_student_path(student), class: 'text-info bs-tooltip', title: :editar do %>
-                        <%= fa_icon 'pencil' %>
+                        <%= fa_icon 'pencil' %> Editar
                       <% end %>
                       <span class="text-danger bs-tooltip" data-title="apagar" data-toggle="modal" data-target="#student_destroy_<%= student.id %>">
                         <%= fa_icon 'times' %>

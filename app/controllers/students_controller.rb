@@ -7,11 +7,11 @@ class StudentsController < ApplicationController
 
   def new
     @student = Student.new
+    @matricula = Student.last.id + 1000
   end
 
   def create
     @student = Student.new(student_params)
-
     if @student.save
       redirect_to students_path, flash: { success: 'Aluno cadastrado com sucesso' }
     else
@@ -20,12 +20,14 @@ class StudentsController < ApplicationController
   end
 
   def edit
+    @matricula = @student.register_number
   end
 
   def update
     if @student.update(student_params)
       redirect_to students_path, flash: { success: 'Aluno alterado com sucesso' }
     else
+
       render :edit
     end
   end

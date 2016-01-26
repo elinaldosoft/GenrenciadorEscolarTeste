@@ -14,7 +14,7 @@
   <div class="col-sm-6">
     <div class="form-group">
       <%= f.label :register_number, 'Matricula*' %>
-      <%= f.text_field :register_number, class: 'form-control', placeholder: 'Matricula do aluno' %>
+      <%= f.text_field :register_number, class: 'form-control', value: "#{@matricula}", readonly: "true", placeholder: 'Matricula do aluno' %>
     </div>
   </div>
 
@@ -27,6 +27,6 @@
 </div>
 
 <button type="submit" class="btn btn-sm btn-block btn-primary">
-  <%= fa_icon :save %> Salvar <%= tm Student %>
+  <%= fa_icon :"floppy-disk" %> Salvar <%= tm Student %>
 </button>
 <% end %>

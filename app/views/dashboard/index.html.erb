@@ -1,1 +1,48 @@
-<h2 class="sub-header">Section title</h2>
+<h2>Gerenciador Escolar</h2>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table no-margin">
+      <tbody>
+        <tr>
+          <td>
+            <span class="label label-info">Número de Alunos Matrículados</span>
+            <span class="label label-default"><%= @classrooms_count %></span>
+          </td>
+          <td>
+            <span class="label label-warning">Número de Alunos Cadastrado</span>
+            <span class="label label-default"><%= @student_count %></span>
+          </td>
+          <td>
+            <span class="label label-danger">Número de Cursos</span>
+            <span class="label label-default"><%= @courses_count %></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h3 class="sub-header">Últimas matrículas</h3>
+    <div class="table-responsive">
+      <%= render 'classrooms/classrooms' %>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <h3 class="sub-header">Últimos cursos</h3>
+    <div class="table-responsive">
+      <%= render 'courses/courses' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h3 class="sub-header">Últimos Alunos Cadastrados</h3>
+    <div class="table-responsive">
+      <%= render 'students/students' %>
+    </div>
+  </div>
+</div>
